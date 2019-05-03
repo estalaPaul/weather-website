@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	<title>Weather</title>
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    	<div class="row justify-content-center mt-5">
+            	<div class="card col-md-6 text-center bg-primary justify-content-center">
+                	<div class="card-body text-center">
+				<h1 id="title">Weather</h1>
+                    		<h2 class="text-white" id="location"></h2>
+                   		<h3 class="text-dark" id="description"></h3>
+                  		<h3 class="text-white" id="degrees"></h3>
+                    		<img id="icon" class="image-fluid" src="">
+				<ul class="list-group text-center">
+					<li class="list-group-item bg-white text-dark" id="humidity"></li>
+					<li class="list-group-item bg-white text-dark" id="clouds"></li>
+					<li class="list-group-item bg-white text-dark" id="wind"></li>
+				</ul>
+                		<button type="button" class="mt-5 btn btn-dark" data-toggle="modal" data-target="#locUnitModal">Change Location</button>
+			</div>	
+		</div>
+    	</div>
+	<div class="modal fade" id="locUnitModal" tabindex="-1" role="dialog" aria-labelledby="locUnitModalLabel" aria-hidden="true">
+  		<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+      				<div class="modal-header">
+        				<h5 class="modal-title" id="locUnitModalLabel">Choose Your City and Units</h5>
+        				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         	 				<span aria-hidden="true">&times;</span>
+        				</button>
+      				</div>
+      				<div class="modal-body">
+       	 				<form>
+						<div class="form-group">
+							<label for="location">City</label>
+							<input type="text" class="form-control" id="locationInput" placeHolder="Gilbert">
+						</div>
+						<div class="form-check form-check-inline">
+  							<input name="units" class="form-check-input" type="radio" id="chkFaren" value="imperial">
+ 							<label class="form-check-label" for="chkFaren">Farenheit</label>
+						</div>
+						<div class="form-check form-check-inline">
+  							<input name="units" class="form-check-input" type="radio" id="chkCels" value="metric" checked>
+  							<label class="form-check-label" for="chkCels">Celsius</label>
+						</div>	
+					</form>
+      				</div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        				<button type="button" class="btn btn-primary" id="btnChange">Change</button>
+      				</div>
+    			</div>
+  		</div>
+	</div>	
+    	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="./js/LocalStorage.js"></script>
+	<script src="./js/UI.js"></script>
+	<script src="./js/Weather.js"></script>
+    	<script src="./js/app.js"></script>
+</body>
+</html>
