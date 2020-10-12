@@ -9,14 +9,11 @@ To use this website you only need to clone this repository and follow the next s
 1. Go to [OpenWeatherMap](https://openweathermap.org/).
    - Create an account.
    - Obtain an API key. 
-2. Create a .ini file with the value: `clientId = "API_KEY"`
-3. Change the route in the file php/getWeather.php, line 5, so that it points to your .ini file. 
-   - `$config = parse_ini_file('routetoinifile');`
-   
+3. Add your api key to the end of the URL [here](https://github.com/estalaPaul/weather-website/blob/master/php/getWeather.php#L7)
+
 ## See Live
 
-To see this website functioning, follow this [link](https://estalapaul.me/weather/).
-
+To see this website functioning, follow this [link](https://estalapaul.me/weather-website/).
 
 ## Disclaimers
 
