@@ -12,7 +12,7 @@ class UI {
 			this.location.innerText = weatherData.name;
 			this.description.innerText = weatherData.weather[0].main;
 			this.degrees.innerText = `${weatherData.main.temp} °C`;
-			this.icon.src = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+			this.icon.src = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
 			this.humidity.textContent = `${weatherData.main.humidity}% humid`;
 			this.clouds.innerText = `${weatherData.clouds.all}% cloudy`;
 			this.wind.innerText = `${weatherData.wind.speed} meter/sec winds with an ${weatherData.wind.deg} degree angle`;

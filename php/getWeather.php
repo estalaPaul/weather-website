@@ -10,7 +10,7 @@
 
         $code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
 
-        if ($code == 403) {
+        if ($code == 429) {
             http_response_code(503);
         } else {
             header('Content-Type: application/json');
