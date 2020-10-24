@@ -29,6 +29,9 @@ function getApiWeather() {
 		if (data.cod == 200) {
 			ui.showWeather(data);
 		}
+		else if (data.cod == 503) {
+			ui.showAlert("Looks like you've made too many requests. Wait a little and try again.");
+		}
 		else {
 			ui.showAlert('Looks like something went wrong. :( Try again later.');
 		}

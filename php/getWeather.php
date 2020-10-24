@@ -8,7 +8,15 @@
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $weather = curl_exec($ch);
 
-        header('Content-Type: application/json');
-        echo $weather;
+        $code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+
+        if ($code == 403) {
+            http_response_code(503);
+        } else {
+            header('Content-Type: application/json');
+            echo $weather;
+        }
+
+        curl_close($ch);
     }
 ?>
